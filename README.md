@@ -1,6 +1,10 @@
-# Lab Node Create an Application
+![img](https://cdn.auth0.com/website/auth0-training/auth0-labs-ext/oktane24.png)
+# Lab: Extend Auth0 Capabilities with Auth0 Forms
 
-In this [Okta Training](https://www.okta.com/training/) hands-on lab, learners will use Auth0 to add authentication to a web application. By the end, users will be able to to authenticate to the application using Auth0's Universal Login Page.
+Extend Auth0 capabilities with your own logic written in Node.js to customize access control, API authorization, compliance, adaptive MFA, and profile enrichment processes.
+
+In this [Okta Training](https://www.okta.com/training/) hands-on lab learners will put Actions into practice. Specifically, they'll create an explicit Allow User List, create an Allow User List for Admin Applications, and enable Admin Only Access for Admin Applications.
+
 
 ## Requirements
 
@@ -9,6 +13,7 @@ In this [Okta Training](https://www.okta.com/training/) hands-on lab, learners w
     **⚠️ Note to internal Okta employees: Do NOT use your EMU (Enterprise-managed user) account since Codespaces are disabled.**
 
 2. An Auth0 account: You'll also need an Auth0 account. If you do not already have one, you can create a free one [here](https://auth0.com/signup).
+
 ## Accessing and Working with Auth0 Labs
 
 1. **Fork this lab repo to your GitHub account:** Click the "Fork" button located in the top right corner of the GitHub page. On the resulting page, under "Owner," select the dropdown menu and choose yourself as the owner for the forked repository. Then click the “Create fork” button. After a moment or two, you'll land on your fork of the repository. This fork now belongs to you, and you can revisit it later at any time.
@@ -17,7 +22,10 @@ In this [Okta Training](https://www.okta.com/training/) hands-on lab, learners w
 4. **If you'd like to save your work to your forked lab repo:** You can commit and push your changes to your fork (See: [Using Source Control in Your Codespace](https://docs.github.com/en/codespaces/developing-in-codespaces/using-source-control-in-your-codespace)).
 5. **IMPORTANT: Close the Codespace when you're finished with the lab:** Codespaces come with a set amount of free usage. To avoid using all of your free use allocation, be sure to return to the forked repo, select the "Code" dropdown, select the dots next to your open Codespace, and select "Delete." This will not delete your forked repository. You can keep that forever, and open a new Codespace whenever you like. 
 
-## What is Auth0?
+
+
+### What is Auth0?
+---
 
 Auth0 helps you to:
 
@@ -28,14 +36,16 @@ Auth0 helps you to:
 * Analytics of how, when, and where users are logging in.
 * Pull data from other sources and add it to the user profile, through [JavaScript rules](https://auth0.com/docs/rules/current).
 
-## Issue Reporting
-
+### Issue Reporting
+---
 If you have found a bug or if you have a feature request, please report them at this repository issues section. Please do not report security vulnerabilities on the public GitHub issue tracker. The [Responsible Disclosure Program](https://auth0.com/whitehat) details the procedure for disclosing security issues.
 
-## Author
+### Author
+---
 
 [Auth0](https://auth0.com)
 
-## License
+### License
+---
 
 This project is licensed under the MIT license. See the [LICENSE](LICENSE.txt) file for more info.
