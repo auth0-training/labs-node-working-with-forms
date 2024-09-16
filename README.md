@@ -1,9 +1,9 @@
 ![img](https://cdn.auth0.com/website/auth0-training/auth0-labs-ext/oktane24.png)
-# Lab: Extend Auth0 Capabilities with Auth0 Forms
+# Lab: Extend Auth0 Identity Flows with Forms
 
-Extend Auth0 capabilities with your own logic written in Node.js to customize access control, API authorization, compliance, adaptive MFA, and profile enrichment processes.
+Extend login and signup flows within your Auth0 tenant’s domain using Auth0 Forms; no more redirects!
 
-In this [Okta Training](https://www.okta.com/training/) hands-on lab learners will put Actions into practice. Specifically, they'll create an explicit Allow User List, create an Allow User List for Admin Applications, and enable Admin Only Access for Admin Applications.
+In this [Okta Training](https://www.okta.com/training/) hands-on lab learners will put Forms into practice. 
 
 
 ## Requirements
