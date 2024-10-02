@@ -49,6 +49,10 @@
     {
       "title": "Verify user_metadata",
       "description": "## Verify user_metadata\n\nYou can verify the presence of the user_metadata properties from the Auth0 Management Dashboard:\n\n1. Go to **User Management > Users**\n1. Select the email address you registered with from the Name column.\n1. Scroll down to the User Metadata (user_metadata) section.\n> You should see the values of `job_title`, `company_name`, and `company_size` you entered during progressive profiling!"
+    },
+    {
+      "title": "What's next?",
+      "description": "## What's next?\n\nCongratulations! By finishing this lab, you have:\n\n- Registered a Machine-to-machine application so that Auth0 Forms can access the Auth0 Management API.\n- Created an Auth0 Form using the Progressive Profiling template.\n- Investigated the underlying components of the Auth0 Form.\n- Created a Post-Login Action to render the Form.\n- Tested the progressive profiling process enabled by the Form.\n\n### So what's next? You can:\n\n- Check out our other [Form Templates](https://developer.auth0.com/resources/templates/forms).\n- Try creating a [progressive profiling Form from scratch](https://auth0.com/docs/customize/forms/configure-progressive-profile-form)\n- Configure [additional sign-up steps with Forms](https://auth0.com/docs/customize/forms/configure-additional-signup-steps).\n- Investigate [custom messages and translation with Forms](https://auth0.com/docs/customize/forms/custom-messages-and-translation)."
     }
   ]
 }
