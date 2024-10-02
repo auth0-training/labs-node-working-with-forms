@@ -1,6 +1,7 @@
 ![img](https://cdn.auth0.com/website/auth0-training/auth0-labs-ext/oktane24.png)
 # Lab: Extend Auth0 Identity Flows with Forms
 
+
 Extend login and signup flows within your Auth0 tenant’s domain using Auth0 Forms; no more redirects!
 
 Forms for Actions is a new visual editor tool that streamlines the registration and login flows. Forms allow you to build custom forms connected to the Universal Login page. With Forms, you don't need to redirect users to your application to prompt end users for additional data that should be available at or after the registration or login process. You can build and manage the identity flow using UI components, custom business logic, and integration with APIs based on a low-code solution. This gives you the flexibility to create personalized experiences that increase user conversion and retention!
