@@ -3,12 +3,21 @@
 
 Extend login and signup flows within your Auth0 tenant’s domain using Auth0 Forms; no more redirects!
 
-In this [Okta Training](https://www.okta.com/training/) hands-on lab learners will put Forms into practice. 
+Forms for Actions is a new visual editor tool that streamlines the registration and login flows. Forms allow you to build custom forms connected to the Universal Login page. With Forms, you don't need to redirect users to your application to prompt end users for additional data that should be available at or after the registration or login process. You can build and manage the identity flow using UI components, custom business logic, and integration with APIs based on a low-code solution. This gives you the flexibility to create personalized experiences that increase user conversion and retention!
 
+Forms enables you to build use cases like:
 
-## Requirements
+- **Progressive profiling**: Define a set of conditions to require users to complete additional information as they engage with your product. For example, when users login for a third-time, you can require them to complete their profile.
+- **Custom policies acceptance**: If you need to update your policies, you can define logic to check if users have accepted the latest policies, and depending on that, display a custom form to users requiring acceptance.
+- **Custom signup or login steps**: Extend and customize your flows with additional steps and custom logic. For example, you can verify email or phone numbers with OTP and account linking, or verify payment details with Stripe, and more.
 
-1. A GitHub account with Codespaces access (you can use the free plan, which gives you 60 hours of use per month). Create a free account [here](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account).
+In this [Okta Training](https://www.okta.com/training/) hands-on lab learners will put Forms into practice.
+
+# How to Get Started with this Lab
+
+## Create Required Free Accounts
+
+1. A GitHub account with Codespaces access (you can use the free plan, which gives you 60 hours of use per month). Create a free account [here](https://docs.github.com/en/get-started/signing-up-for-github/signing-up-for-a-new-github-account) if you do not already have one.
 
     **⚠️ Note to internal Okta employees: Do NOT use your EMU (Enterprise-managed user) account since Codespaces are disabled.**
 
@@ -16,11 +25,11 @@ In this [Okta Training](https://www.okta.com/training/) hands-on lab learners wi
 
 ## Accessing and Working with Auth0 Labs
 
-1. **Fork this lab repo to your GitHub account:** Click the "Fork" button located in the top right corner of the GitHub page. On the resulting page, under "Owner," select the dropdown menu and choose yourself as the owner for the forked repository. Then click the “Create fork” button. After a moment or two, you'll land on your fork of the repository. This fork now belongs to you, and you can revisit it later at any time.
+1. **Fork this lab repo to your GitHub account:** After logging into GitHub, click the "Fork" button located in the top right corner of the GitHub page. On the resulting page, under "Owner," select the dropdown menu and choose yourself as the owner for the forked repository. Then click the “Create fork” button. After a moment or two, you'll land on your fork of the repository. This fork now belongs to you, and you can revisit it later at any time.
 2. **Open the lab repo in a Codespace:** From the “Code” dropdown menu, toggle to the Codespaces tab. Click the plus sign to create and open the lab in a Codespace. A new tab will open, and Codespaces will begin configuring the lab environment. Wait for the environment to finish building.
 3. **Begin working with the lab:** Once the environment is ready you'll see a Codetour popup with instructions for connecting the lab to your Auth0 account. This can take some time, as the environment is installing several plugins to facilitate the lab. Once it is complete, you can open the Codetour to view all steps using the panel in the lower right. Follow the lab instructions (clicking to configure, selecting next, inserting code, etc.) in order to complete the lab.
 4. **If you'd like to save your work to your forked lab repo:** You can commit and push your changes to your fork (See: [Using Source Control in Your Codespace](https://docs.github.com/en/codespaces/developing-in-codespaces/using-source-control-in-your-codespace)).
-5. **IMPORTANT: Close the Codespace when you're finished with the lab:** Codespaces come with a set amount of free usage. To avoid using all of your free use allocation, be sure to return to the forked repo, select the "Code" dropdown, select the dots next to your open Codespace, and select "Delete." This will not delete your forked repository. You can keep that forever, and open a new Codespace whenever you like. 
+5. **IMPORTANT: Close the Codespace when you're finished with the lab:** Codespaces come with a set amount of free usage. To avoid using all of your free use allocation, be sure to return to the forked repo, select the "Code" dropdown, select the dots next to your open Codespace, and select "Delete." This will not delete your forked repository. You can keep that forever, and open a new Codespace whenever you like.
 
 
 

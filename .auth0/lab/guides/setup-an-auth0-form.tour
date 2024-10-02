@@ -1,0 +1,42 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "2: Set up an Auth0 Form",
+  "steps": [
+    {
+      "title": "Overview",
+      "description": "## Overview\n\nForms for Actions is a new visual editor tool that streamlines the registration and login flows. Forms allow you to build custom forms connected to the Universal Login page. With Forms, you don't need to redirect users to your application to prompt end users for additional data that should be available at or after the registration or login process. You can build and manage the identity flow using UI components, custom business logic, and integration with APIs based on a low-code solution. This gives you the flexibility to create personalized experiences that increase user conversion and retention!\n\nForms enables you to build use cases like:\n\n- **Progressive profiling**: Define a set of conditions to require users to complete additional information as they engage with your product. For example, when users login for a third-time, you can require them to complete their profile.\n- **Custom policies acceptance**:  If you need to update your policies, you can define logic to check if users have accepted the latest policies, and depending on that, display a custom form to users requiring acceptance.\n- **Custom signup or login steps**: Extend and customize your flows with additional steps and custom logic. For example, you can verify email or phone numbers with OTP and account linking, or verify payment details with Stripe, and more.\n\n### What you'll do\n\nIn this lab section you will:\n- Register a Machine-to-machine application so that Auth0 Forms can access the Auth0 Management API.\n- Create an Auth0 Form.\n- Customize your Form to show the user's name and the current policy version.\n- Render the form during user registration."
+    },
+    {
+      "title": "Register a Machine-to-machine application in your Auth0 tenant",
+      "description": "## Register a Machine-to-Machine (M2M) Application in Your Auth0 Tenant\nAn Auth0 Form must be registered as a Machine-to-machine (M2M) application with your Auth0 tenant to grant it scopes on the Auth0 Management API. This is necessary for Auth0 Forms to perform operations on user data.\n\n1. Log in to your Auth0 Management Dashboard.\n1. Navigate to **Applications > Applications**.\n2. Select **+ Create Application** and name it **FormsM2MClient**.\n3. Select **Machine to Machine Application** and then **Create**.\n4. In the *Authorize Machine to Machine Application* view, select the Auth0 Management API.\n5. Select the following *Permissions*:\n    - read:users\n    - update:users\n    - create:users\n    - read:users_app_metadata\n    - create:users_app_metadata\n    - update:users_app_metadata\n    - delete:users_app_metadata\n6. Select **Authorize**.\n\n⚠️**Important**: Keep this tab open, as we will refer to the following details soon:\n\n- Domain\n- Client ID\n- Client Secret",
+      "selection": {
+        "start": {
+          "line": 21,
+          "character": 1
+        },
+        "end": {
+          "line": 23,
+          "character": 16
+        }
+      }
+    },
+    {
+      "title": "Create an Auth0 Form",
+      "description": "## Create an Auth0 Form\n\nLet's use Auth0 Forms to build a progressive profile form that requires the users to input their job title.\n\n1. In a new tab, go to the Auth0 Management Dashboard and go to **Actions** > **Forms**.\n1. Select **Create form**.\n2. Select **Use a template**.\n3. Select **Progressive profiling** from the list of templates.\n4. Keep the default Form and Flow 1 names and select the **Continue** button."
+    },
+    {
+      "title": "Configure Vault connection settings",
+      "description": "## Configure Vault connection settings\n\nThe template requires an Auth0 vault connection. A vault lets you securely store secrets or common settings (for example: API keys, access tokens, refresh tokens) to authenticate requests with external services or integrations as vault connections.\n\nIn this case, since we are connecting to a Machine-to-machine (M2M) application, which uses an access token with an expiration time and a refresh token, the vault stores both tokens and generates a new access token before it expires.\n\nLet's set up the vault connection!\n\n1. On the following Vault settings page, select the **Auth0 New Vault Connection** tile.\n1.  Select the **+** button in the Vault connection section to add a new Vault connection.\n5. Name this connection **Auth0 M2M Client** and select the **Continue** button.\n6. Switch to the tab you left open that shows the details for **FormsM2MClient**. If you closed this tab, you can get there again by going to the Auth0 Management Dashboard, then to **Applications > Applications > FormsM2MClient**.\n1. Use the details on this page to copy and paste the **Tenant domain**, **Client ID**, and **Client Secret** into the Add Vault Connection form.\n7. When finished, select the **Add Vault Connection** button.\n1. Finally, select the **Create** button."
+    },
+    {
+      "title": "Investigate your Form",
+      "description": "## Investigate your Form\n\nAt this point, your Form has been created with the Progressive Profiling template and you are redirected to the vistual editor page. The Form is ready to use as-is, but you can also customize it. Let's explore the components of the unedited Form.\n\n1. In the visual editor, select the **Router** node. \n>> With Router nodes, you can add rules to Forms to create conditional logic jumps that redirect users between nodes. Rules are evaluated in the order placed in the router. When a rule condition is met, the journey continues to the linked node, and no other rule conditions are evaluated. Here we see three rules: **Missing Profile Data**, **Missing Company Data**, and **Default**. The **Default** node is automatically generated in all Router nodes.\n2. Select the **Missing Company Data** rule. \n>> A rule condition can be defined for a specific user_metadata attribute to route a user to a specific step node or flow node. Here we see the following condition: **if `context.user.user_metadata.job_title` has no defined value.**\n3. Select the **->|** button to the top right of the Missing profile data section to collapse this node. \n4. Follow the connection from Missing profile data to its corresponding Step node.\n>> Step nodes are the visual representation of the form. They can contain any number of components, such as fields, blocks, and widgets where the user can fill in their data. Here you see the form prompts the user for the missing job title data."
+    },
+    {
+      "file": "",
+      "line": 1,
+      "description": "## Launch the web app\n\n1. Click [here](command:workbench.action.debug.start) to launch the app locally.\n1. Click [Open URL](command:auth0.lab.openEndpointByName?[\"Lab: Web App\"]) to open the app in your web browser.\n1. Click the *Sign-Up* link and create a new account. \n\n> It is best to use a personal or burner Gmail account that you have access to using a username and password. If you have a Gmail account, append \"_+auth0labs_\" to create a Gmail alias for it. \n    \n> _Example:_ If my email is someone@gmail.com, it would become someone<b>+auth0labs</b>@gmail.com This step will ensure that no wires are crossed with all the accounts you'll be setting up over the course of these labs. Any emails that your app or Auth0 generate will still come to your regular Gmail inbox, but the account will be listed separately in Auth0. We'll use this account later, so be certain to use a password that you will remember!\n    \nOnce the account is created, you will be authenticated and returned to the application. ",
+      "title": "Launch the web app"
+    }
+  ]
+}
