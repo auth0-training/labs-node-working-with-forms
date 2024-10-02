@@ -1,6 +1,5 @@
-![img](https://cdn.auth0.com/website/auth0-training/auth0-labs-ext/oktane24.png)
-# Lab: Extend Auth0 Identity Flows with Forms
 
+# Lab: Extend Auth0 Identity Flows with Forms
 
 Extend login and signup flows within your Auth0 tenant’s domain using Auth0 Forms; no more redirects!
 
