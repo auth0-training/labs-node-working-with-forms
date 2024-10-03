@@ -1,6 +1,7 @@
 {
   "$schema": "https://aka.ms/codetour-schema",
   "title": "1: Set up an Auth0 Form for Progressive Profiling",
+  "nextTour": "2: Test Progressive Profiling",
   "steps": [
     {
       "title": "Overview",
