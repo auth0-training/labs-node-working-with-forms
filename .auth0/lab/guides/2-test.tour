@@ -1,0 +1,58 @@
+{
+  "$schema": "https://aka.ms/codetour-schema",
+  "title": "2: Test Progressive Profiling",
+  "steps": [
+    {
+      "title": "Enable Universal Login",
+      "description": "## Enable Universal Login\n1. From the [Auth0 Management Dashboard](https://manage.auth0.com/), go to **Branding** > **Universal Login**.\n1. Scroll down to **Advanced Options**.\n1. Ensure **Universal Login** is selected. ⚠️ Note that the Auth0 Forms feature is incompatible with Classic Login.\n1. **Save Changes** as necessary.",
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 4
+        },
+        "end": {
+          "line": 1,
+          "character": 26
+        }
+      }
+    },
+    {
+      "title": "Enable Identifier First",
+      "description": "1. From the [Auth0 Management Dashboard](https://manage.auth0.com/), go to **Authentication** > **Authentication Profile**.\n1. If it is not already selected, select **Identifier First**."
+    },
+    {
+      "title": "Test Progressive Profiling: Registration",
+      "description": "## Test Progressive Profiling: Registration\n1. From the Authentication Profile page, select the **Try** button.\n> This will open the Universal Login page in a new tab.\n1. Select **Sign up**.\n1. Enter an email. \n> We suggest you use a gmail alias. For example, if your email is **user@gmail.com**, enter **user+progtest@gmail.com**.\n1. Select **Continue**.\n1. Enter a password that you can remember and select **Continue**.\n> Notice that, since the **Missing Profile Information** rule (that is, **if `{{context.user.user_metadata.job_title}}` has no value**) of your Form was triggered, the corresponding step that asks for the user's job title is rendered!\n1. Enter a value for **Job title**. You do not have to enter a phone number since it is optional.\n1. Select **Continue**.\n> You should now see an *It Works!* message, indicating that the user would now be authenticated to the application.\n1. You can close this tab by clicking **Take me to the dashboard**.\n",
+      "selection": {
+        "start": {
+          "line": 1,
+          "character": 30
+        },
+        "end": {
+          "line": 1,
+          "character": 44
+        }
+      }
+    },
+    {
+      "title": "Test Progressive Profiling: Subsequent Login",
+      "description": "## Test Progressive Profiling: Subsequent Login\nYou saw that after the registration process, during post-login, the first rule in our Auth0 Form was triggered. Because of this, the user was asked to provide their job title information. Since only one rule is triggered during a particular post-login event, this was the only Form step the user experienced. This is to limit how much information we ask from a user at any given time, to reduce friction and to ensure the user does not abandon the onboarding process.\n\nSo what happens when the user logs in again? Let's check it out!\n\n1. If you are no longer on the Authentication Profile page, you can get there from the [Auth0 Management Dashboard](https://manage.auth0.com/) and going to **Authentication > Authentication Profile**.\n1. Select the **Try** button again to open the Universal Login page.\n1. Log in as the user you registered in the previous step.\n> Notice that this time the second rule, **Missing Company Data**, is triggered. Now the Form step that prompts the user for their Company name and Company size is rendered.\n1. Supply values for these two fields and select **Continue**.\n1. Select **Continue**.\n> You should now see an *It Works!* message, indicating that the user would now be authenticated to the application.\n1. You can close this tab by clicking **Take me to the dashboard**.\n\n### ❓️ Thought question: Which rule would be triggered on the user's next login? What would be the result? \n\nThink about the rules that were defined for this form:\n1. **Missing Profile Data**: Triggered when the user's job_title is missing from the user_metadata.\n2. **Missing Company Information**: Triggered when the user's company_name and company_size is missing from the user_metadata.\n3. **Default**: Triggered in all other cases.\n\n"
+    },
+    {
+      "title": "Thought question",
+      "description": "## ❓️ Thought question: Which rule would be triggered on the user's next login? What would be the result? \n\nThink about the rules that were defined for this form:\n1. **Missing profile data**: Triggered when the user's `job_title` is missing from the `user_metadata.`\n2. **Missing company information**: Triggered when the user's `company_name` and `company_size` is missing from the `user_metadata.`\n3. **Default**: Triggered in all other cases.\n"
+    },
+    {
+      "title": "Answer",
+      "description": "## ⭐ Answer\n\nThe **Default** rule would be triggered since the `job_title`, `company_name`, and `company_size` are set in the `user_metadata`. Since the Default rule does not produce a Form step, the authentication flow will resume as normal."
+    },
+    {
+      "title": "Verify user_metadata",
+      "description": "## Verify user_metadata\n\nYou can verify the presence of the user_metadata properties from the Auth0 Management Dashboard:\n\n1. Go to **User Management > Users**\n1. Select the email address you registered with from the Name column.\n1. Scroll down to the User Metadata (user_metadata) section.\n> You should see the values of `job_title`, `company_name`, and `company_size` you entered during progressive profiling!"
+    },
+    {
+      "title": "What's next?",
+      "description": "## What's next?\n\nCongratulations! By finishing this lab, you have:\n\n- Registered a Machine-to-machine application so that Auth0 Forms can access the Auth0 Management API.\n- Created an Auth0 Form using the Progressive Profiling template.\n- Investigated the underlying components of the Auth0 Form.\n- Created a Post-Login Action to render the Form.\n- Tested the progressive profiling process enabled by the Form.\n\n### So what's next? You can:\n\n- Check out our other [Form Templates](https://developer.auth0.com/resources/templates/forms).\n- Try creating a [progressive profiling Form from scratch](https://auth0.com/docs/customize/forms/configure-progressive-profile-form)\n- Configure [additional sign-up steps with Forms](https://auth0.com/docs/customize/forms/configure-additional-signup-steps).\n- Investigate [custom messages and translation with Forms](https://auth0.com/docs/customize/forms/custom-messages-and-translation)."
+    }
+  ]
+}
