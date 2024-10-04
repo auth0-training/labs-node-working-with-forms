@@ -40,7 +40,7 @@
     },
     {
       "title": "Thought question",
-      "description": "## ❓️ Thought question: Which rule would be triggered on the user's next login? What would be the result? \n\nThink about the rules that were defined for this form:\n1. **Missing Profile Data**: Triggered when the user's `job_title` is missing from the `user_metadata.`\n2. **Missing Company Information**: Triggered when the user's `company_name` and `company_size` is missing from the `user_metadata.`\n3. **Default**: Triggered in all other cases.\n"
+      "description": "## ❓️ Thought question: Which rule would be triggered on the user's next login? What would be the result? \n\nThink about the rules that were defined for this form:\n1. **Missing profile data**: Triggered when the user's `job_title` is missing from the `user_metadata.`\n2. **Missing company information**: Triggered when the user's `company_name` and `company_size` is missing from the `user_metadata.`\n3. **Default**: Triggered in all other cases.\n"
     },
     {
       "title": "Answer",
