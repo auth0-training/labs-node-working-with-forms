@@ -11,7 +11,7 @@ Forms enables you to build use cases like:
 - **Custom policies acceptance**: If you need to update your policies, you can define logic to check if users have accepted the latest policies, and depending on that, display a custom form to users requiring acceptance.
 - **Custom signup or login steps**: Extend and customize your flows with additional steps and custom logic. For example, you can verify email or phone numbers with OTP and account linking, or verify payment details with Stripe, and more.
 
-In this [Okta Training](https://www.okta.com/training/) hands-on lab learners will put Forms into practice.
+In this [Okta Learning](https://learning.okta.com/) hands-on lab learners will put Forms into practice.
 
 ---
 
